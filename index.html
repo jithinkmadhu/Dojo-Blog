@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dojo Blog</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="app-header">
+        <h3 class="pink-color">The Dojo blog</h3>
+        <nav>
+          <a id="home-button" class="" onclick="toggle('Home');">Home</a>
+          <a id="new-blog-button" class="nav-button" onclick="toggle('Blog');">New blog</a>
+        </nav>
+      </header>
+      <div class="app-body app-body-home" id="home-body">
+        <h4>All Blogs&#33;</h4>
+        <ul id="blogs-list" > 
+          <!-- onclick="eachItem(2);" -->
+          <!-- <li>
+            <p class="pink-color title" id="0">my new item</p>
+            <p class="author">written by mario</p>
+          </li>
+          <li>
+            <p class="pink-color title" id="1">my second item</p>
+            <p class="author">written by dump</p>
+          </li>
+          <li>
+            <p class="pink-color title" id="2">web dev</p>
+            <p class="author">written by super</p>
+          </li> -->
+        </ul>
+      </div>
+      <div class="app-body app-body-add" id="add-body">
+        <h4 class="pink-color">Add a new Blog</h4>
+        <!-- <form action="#" onsubmit="return validate();" id="addBlog"> -->
+          <div class="form-items">
+            <label for="title">Blog title:</label><br />
+            <input
+              type="text"
+              class="input-items"
+              id="title"
+              name="title"
+            /><br />
+            <div id="title-error"></div>
+            <br />
+            <label for="body">Blog body:</label><br />
+            <textarea
+              class="input-items"
+              name="body"
+              id="body"
+              rows="3"
+            ></textarea
+            ><br />
+            <div id="body-error"></div>
+            <label for="author">Blog author:</label><br />
+            <select class="input-items input-select" name="author" id="author">
+              <option value="mario" selected>Mario</option>
+              <option value="super">Super</option>
+              <option value="dump">Dump</option>
+            </select>
+          </div>
+
+          <button onclick="validate();">Add blog</button>
+          <!-- onclick="validate();" -->
+        </form>
+      </div>
+      <div class="app-body app-body-each" id="each-body">
+        <div class="each-blog">
+          <h4 class="pink-color" id="each-blog-title"></h4>
+          <p id="each-blog-author"></p>
+          <p id="each-blog-body"></p>
+          <form action="./index.html">
+            <button>Edit</button>
+            <button>Delete</button>
+          </form>
+        </div>
+      </div>
+      <div class="app-body app-body-add" id="edit-body">
+        <h4 class="pink-color">Add a new Blog</h4>
+        <!-- <form action="#" onsubmit="return validate();" id="addBlog"> -->
+          <div class="form-items">
+            <label for="title">Blog title:</label><br />
+            <input
+              type="text"
+              class="input-items"
+              id="edit-title"
+              name="title"
+            /><br />
+            <div id="edit-title-error"></div>
+            <br />
+            <label for="body">Blog body:</label><br />
+            <textarea
+              class="input-items"
+              name="body"
+              id="edit-blog-body"
+              rows="3"
+            ></textarea
+            ><br />
+            <div id="edit-body-error"></div>
+            <label for="author">Blog author:</label><br />
+            <select class="input-items input-select" name="author" id="edit-author">
+              <option value="mario" selected>Mario</option>
+              <option value="super">Super</option>
+              <option value="dump">Dump</option>
+            </select>
+          </div>
+
+          <button id="edit-button">Update blog</button>
+          <!-- onclick="validate();" -->
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
