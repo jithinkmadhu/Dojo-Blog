@@ -166,3 +166,8 @@ ul {
   height: 80%;
   overflow: scroll;
 }
+
+#each-blog-body {
+  height: 40vh;
+  overflow: scroll;
+}
